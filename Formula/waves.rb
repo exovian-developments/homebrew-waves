@@ -1,8 +1,8 @@
 class Waves < Formula
-  desc "Structured context protocol for AI agents — Claude, Codex, Gemini CLI"
+  desc "Product Consciousness Framework for AI agents — Claude Code, Codex, Gemini CLI"
   homepage "https://github.com/exovian-developments/waves"
-  url "https://github.com/exovian-developments/waves/archive/refs/tags/v1.3.4.tar.gz"
-  sha256 "ad90ca250e797190a134ab995091fa9aac3e5a97ae6d8f45c3ccb34acee03e9a"
+  url "https://github.com/exovian-developments/waves/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "d98198e851ca81e9c4609f1c787bbc7fd72107e9291e9ff7a3c8f563b6668b38"
   license "AGPL-3.0-or-later"
 
   def install
@@ -15,6 +15,13 @@ class Waves < Formula
     Dir[".claude/commands/*.md"].each do |cmd|
       (data_dir/".claude"/"commands").install cmd
     end
+
+    (data_dir/".claude"/"hooks").mkpath
+    Dir[".claude/hooks/*.sh"].each do |hook|
+      (data_dir/".claude"/"hooks").install hook
+    end
+
+    (data_dir/".claude").install ".claude/settings.json"
   end
 
   def caveats
