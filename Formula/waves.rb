@@ -2,7 +2,7 @@ class Waves < Formula
   desc "Product Consciousness Framework for AI agents — Claude Code, Codex, Gemini CLI"
   homepage "https://github.com/exovian-developments/waves"
   url "https://github.com/exovian-developments/waves/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "b7194c78c767555207ab19d735d8da051b941e30220163da7ad2f14933b26c26"
+  sha256 "56012d3b97fae63a39128e432dfbffbadf77bc065fa8690de5313be24d4aa016"
   license "AGPL-3.0-or-later"
 
   def install
